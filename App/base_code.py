@@ -1,0 +1,23 @@
+ev_database=[
+    {"MSRP": 60, "TYPE":"compact", "STYLE":"innovative", "MAKE":"Hyundai", "MODEL":"Lyric"},
+    {"MSRP": 90, "TYPE":"SUV", "STYLE":"conventional","MAKE":"Ford","MODEL":"F150"},
+    {"MSRP": 120, "TYPE":"sedan", "STYLE":"innovative","MAKE":"Porsche","MODEL":"Taycan"}
+             ]
+
+user_price_min=int(input("Price Min"))
+user_price_max=int(input("Price Max"))
+user_type=input("Type")
+user_style=input("Style")
+
+user_picks=[]
+
+for x in ev_database:
+    if user_price_min <= x["MSRP"] <= user_price_max and (x["TYPE"]== user_type) and (x["STYLE"]== user_style):
+        user_picks.append(x)
+
+if user_picks:
+    print("selection")
+    print(user_picks)
+else:
+    print("none")
+    
