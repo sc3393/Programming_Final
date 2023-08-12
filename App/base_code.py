@@ -25,7 +25,8 @@ if __name__ =="__main__":
     
     if user_picks:
         print("selection")
-        print(user_picks)
+        for x in user_picks:
+            print(f"MSRP: {format_usd(x['MSRP'])} | Type: {x['TYPE']} | Style: {x['STYLE']} | Make: {x['MAKE']} | Model: {x['MODEL']}")
     else:
         print("none")
     
