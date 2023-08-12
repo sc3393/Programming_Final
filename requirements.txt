@@ -1,0 +1,8 @@
+
+python-dotenv
+
+flask
+gunicorn
+
+
+pytest
