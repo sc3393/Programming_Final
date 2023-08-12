@@ -17,8 +17,6 @@ if __name__ =="__main__":
     
     user_picks=[]
     
-    print(format_usd(60))
-    
     for x in ev_database:
         if user_price_min <= x["MSRP"] <= user_price_max and (x["TYPE"]== user_type) and (x["STYLE"]== user_style):
             user_picks.append(x)
