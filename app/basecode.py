@@ -2,7 +2,7 @@
 from google.colab import auth
 from google.auth import default
 import gspread
-from IPython.display import Image, display
+#from IPython.display import Image, display
 auth.authenticate_user()
 creds, _ = default()
 client = gspread.authorize(creds)
