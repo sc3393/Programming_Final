@@ -56,7 +56,7 @@ if __name__ =="__main__":
     finished_inputs2 = False
     while not finished_inputs2:
         user_style = input("Please Select One of the Following Styles (Innovative, Conventional): ").lower()
-        if user_style == "compact" or user_type == "suv" or user_type == "sedan":
+        if user_style == "innovative" or user_style == "conventional":
             finished_inputs2 = True 
             print("")  
         else:
