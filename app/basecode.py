@@ -55,7 +55,7 @@ if __name__ =="__main__":
   
     # Change the label text
     def show():
-    label.config( text = clicked.get() )
+        label.config( text = clicked.get() )
   
     # Dropdown menu options
     options = [
