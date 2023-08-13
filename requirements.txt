@@ -1,9 +1,3 @@
-gspread
-
-google
-
-#IPython.display
-
 python-dotenv
 
 flask 
