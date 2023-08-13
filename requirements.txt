@@ -1,8 +1,6 @@
 gspread
 
-google.colab
-
-google.auth
+google
 
 #IPython.display
 
