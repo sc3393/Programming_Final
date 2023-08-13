@@ -18,5 +18,3 @@ pip install -r requirements.txt
 
 ```sh
 python app/basecode.py
-
-#export FLASK_APP=web_app flask run
