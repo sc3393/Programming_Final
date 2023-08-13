@@ -1,6 +1,6 @@
 
-from google.colab import auth
-from google.auth import default
+from colab import auth
+from auth import default
 import gspread
 #from IPython.display import Image, display
 auth.authenticate_user()
