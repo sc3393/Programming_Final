@@ -43,7 +43,7 @@ if __name__ =="__main__":
     user_price_max=int(input("Please Input the Max. Price: "))
     #user_type=input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
 
-   finished_inputs = False
+    finished_inputs = False
     while not finished_inputs:
         user_type = input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
         if user_type == "compact" or "suv" or "sedan":
