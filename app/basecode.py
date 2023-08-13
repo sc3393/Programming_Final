@@ -38,7 +38,9 @@ if __name__ =="__main__":
         {"MSRP": 41600, "TYPE":"sedan", "STYLE":"innovative", "MAKE":"Hyundai", "MODEL":"Ioniq 6"},
         {"MSRP": 86700, "TYPE":"sedan", "STYLE":"conventional", "MAKE":"Porsche", "MODEL":"Taycan "},
         ]
-    
+    print("Welcome to the EV Wizard!")
+    print("------------")
+    print("------------")
     user_price_min=int(input("Please Input the Min. Price: "))
     print("")
     user_price_max=int(input("Please Input the Max. Price: "))
@@ -73,6 +75,8 @@ if __name__ =="__main__":
         print("Available Options: ")
         for x in user_picks:
             print(f"MSRP: {format_usd(x['MSRP'])} | Type: {x['TYPE']} | Style: {x['STYLE']} | Make: {x['MAKE']} | Model: {x['MODEL']}")
+            print("------------")
+            print("Thank you for using the EV Wizard!")
     else:
         print("No Available Option for Your Selected criterions, Please Try Again!")
     
