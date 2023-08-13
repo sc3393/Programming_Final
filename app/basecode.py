@@ -39,56 +39,10 @@ if __name__ =="__main__":
         {"MSRP": 86700, "TYPE":"sedan", "STYLE":"conventional", "MAKE":"Porsche", "MODEL":"Taycan "},
         ]
     
-    user_price_min=int(input("Price Min: "))
-    user_price_max=int(input("Price Max: "))
-    user_type=input("Type: ").lower()
-    user_style=input("Style: ").lower()
-    
-    # Import module
-    from tkinter import *
-  
-    # Create object
-    root = Tk()
-  
-    # Adjust size
-    root.geometry( "200x200" )
-  
-    # Change the label text
-    def show():
-        label.config( text = clicked.get() )
-  
-    # Dropdown menu options
-    options = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-    ]
-  
-    # datatype of menu text
-    clicked = StringVar()
-  
-    # initial menu text
-    clicked.set( "Monday" )
-  
-    # Create Dropdown menu
-    drop = OptionMenu( root , clicked , *options )
-    drop.pack()
-  
-    # Create button, it will change label text
-    button = Button( root , text = "click Me" , command = show ).pack()
-  
-    # Create Label
-    label = Label( root , text = " " )
-    label.pack()
-  
-    # Execute tkinter
-    root.mainloop()
-
-
+    user_price_min=int(input("Please Input the Min. Price: "))
+    user_price_max=int(input("Please Input the Max. Price: "))
+    user_type=input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
+    user_style=input("Please Select One of the Following Styles (Innovative, Conventional): ").lower()
 
     user_picks=[]
     
