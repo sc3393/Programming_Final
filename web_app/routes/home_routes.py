@@ -12,19 +12,19 @@ def index():
 
 @home_routes.route("/search", methods=["POST"])
 def search():
-    user_price_min = int(request.form["price_min"])
-    user_price_max = int(request.form["price_max"])
-    user_type = request.form["type"]
-    user_style = request.form["style"]
+    price_range = request.form["price_range"]
+    type = request.form["type"]
+    style = request.form["style"]
+
+    min_price, max_price = map(int, price_range.split('-'))
 
     user_picks = []
 
     for x in ev_database:
         if (
-            user_price_min <= x["MSRP"]
-            <= user_price_max
-            and x["TYPE"] == user_type
-            and x["STYLE"] == user_style
+            min_price <= x["MSRP"] <= max_price
+            and x["TYPE"] == type
+            and x["STYLE"] == style
         ):
             user_picks.append(x)
 

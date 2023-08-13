@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Electric Vehicle Search</title>
-</head>
+    {% extends "bootstrap_5_layout.html" %}
+    {% set active_page = "home" %}
+    
+    {% block content %}
+    
 <body>
     <h1>Electric Vehicle Search</h1>
     
     <form action="/search" method="POST">
-        <label for="price_min">Price Min:</label>
-        <input type="number" name="price_min" required><br>
-        
-        <label for="price_max">Price Max:</label>
-        <input type="number" name="price_max" required><br>
+        <label for="price_range">Price Range:</label>
+        <select name="price_range" required>
+            <option value="20000-40000">$20,000 - $40,000</option>
+            <option value="40000-70000">$40,000 - $70,000</option>
+            <option value="70000-90000000">$70,001+</option>
+        </select><br>
         
         <label for="type">Type:</label>
-        <input type="text" name="type" required><br>
+        <select name="type" required>
+            <option value="SUV">SUV</option>
+            <option value="Compact">Compact</option>
+            <option value="Sedan">Sedan</option>
+        </select><br>
         
         <label for="style">Style:</label>
-        <input type="text" name="style" required><br>
+        <select name="style" required>
+            <option value="Innovative">Innovative</option>
+            <option value="Conventional">Conventional</option>
+        </select><br>
         
         <button type="submit">Search</button>
     </form>
@@ -35,4 +45,5 @@
     <p>No vehicles match your criteria.</p>
     {% endif %}
 </body>
+{% endblock %}
 </html>
