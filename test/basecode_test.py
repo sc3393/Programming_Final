@@ -1,5 +1,4 @@
 
-
 from app.basecode import format_usd
 
 def test_usd_formatting():

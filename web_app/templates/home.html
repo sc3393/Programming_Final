@@ -8,28 +8,32 @@
 <body>
     <h1>Electric Vehicle Search</h1>
     
-    <form action="/search" method="POST">
+    <form action="/input" method="POST">
+
         <label for="price_range">Price Range:</label>
         <select name="price_range" required>
             <option value="20000-40000">$20,000 - $40,000</option>
             <option value="40000-70000">$40,000 - $70,000</option>
-            <option value="70000-90000000">$70,001+</option>
-        </select><br>
+            <option value="70000-90000000">$70,000+</option>
+        </select>
+        <br>
         
         <label for="type">Type:</label>
         <select name="type" required>
             <option value="SUV">SUV</option>
             <option value="Compact">Compact</option>
             <option value="Sedan">Sedan</option>
-        </select><br>
+        </select>
+        <br>
         
         <label for="style">Style:</label>
         <select name="style" required>
             <option value="Innovative">Innovative</option>
             <option value="Conventional">Conventional</option>
-        </select><br>
+        </select>
+        <br>
         
-        <button type="submit">Search</button>
+        <button type="btn btn-success">Search</button>
     </form>
 
     {% if user_picks %}

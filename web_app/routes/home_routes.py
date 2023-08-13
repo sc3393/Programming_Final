@@ -1,4 +1,3 @@
-# this is the "web_app/routes/home_routes.py" file...
 
 from flask import Blueprint, request, render_template
 from app.basecode import format_usd, ev_database
@@ -8,16 +7,24 @@ home_routes = Blueprint("home_routes", __name__)
 @home_routes.route("/")
 @home_routes.route("/home")
 def index():
-    return render_template("home.html", ev_database=ev_database, format_usd=format_usd)
+    return render_template("home.html")
 
-@home_routes.route("/search", methods=["POST"])
-def search():
+@home_routes.route("/input", methods=["POST"])
+def input():
     price_range = request.form["price_range"]
     type = request.form["type"]
     style = request.form["style"]
-
-    min_price, max_price = map(int, price_range.split('-'))
-
+    
+    if price_range == "20000-40000":
+        min_price = 20000
+        max_price = 40000
+    elif price_range == "40001-70000":
+        min_price = 40001
+        max_price = 70000
+    else:
+        min_price = 70001
+        max_price = float("inf")
+    
     user_picks = []
 
     for x in ev_database:
