@@ -40,23 +40,28 @@ if __name__ =="__main__":
         ]
     
     user_price_min=int(input("Please Input the Min. Price: "))
+    print("")
     user_price_max=int(input("Please Input the Max. Price: "))
-    #user_type=input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
-
-    finished_inputs = False
-    while not finished_inputs:
+    print("")
+    
+    finished_inputs1 = False
+    while not finished_inputs1:
         user_type = input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
         if user_type == "compact" or user_type == "suv" or user_type == "sedan":
-            finished_inputs = True 
+            finished_inputs1 = True 
             print("")  
         else:
-            print("Please Input a Valid Product ID")
-   
-        
-        
-    #if user_type != "compact" or "suv" or "sedan":
-    #    print("Type Entered is not available, please try again!")
-    user_style=input("Please Select One of the Following Styles (Innovative, Conventional): ").lower()
+            print("Type Entered is not available, please try again!")
+    
+    finished_inputs2 = False
+    while not finished_inputs2:
+        user_style = input("Please Select One of the Following Styles (Innovative, Conventional): ").lower()
+        if user_style == "compact" or user_type == "suv" or user_type == "sedan":
+            finished_inputs2 = True 
+            print("")  
+        else:
+            print("Style Entered is not available, please try again!")
+    
 
     user_picks=[]
     
