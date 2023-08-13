@@ -1,4 +1,8 @@
 
 python-dotenv
 
+flask 
+
 pytest
+
+jinja2

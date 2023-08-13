@@ -21,3 +21,9 @@ test
 
 ```sh
 pytest
+```
+web app
+
+```sh
+export FLASK_APP=web_app
+flask run

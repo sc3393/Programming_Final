@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electric Vehicle Search</title>
+</head>
+<body>
+    <h1>Electric Vehicle Search</h1>
+    
+    <form action="/search" method="POST">
+        <label for="price_min">Price Min:</label>
+        <input type="number" name="price_min" required><br>
+        
+        <label for="price_max">Price Max:</label>
+        <input type="number" name="price_max" required><br>
+        
+        <label for="type">Type:</label>
+        <input type="text" name="type" required><br>
+        
+        <label for="style">Style:</label>
+        <input type="text" name="style" required><br>
+        
+        <button type="submit">Search</button>
+    </form>
+
+    {% if user_picks %}
+    <h2>Selection</h2>
+    <ul>
+        {% for x in user_picks %}
+        <li>
+            MSRP: {{ format_usd(x['MSRP']) }} | Type: {{ x['TYPE'] }} | Style: {{ x['STYLE'] }} | Make: {{ x['MAKE'] }} | Model: {{ x['MODEL'] }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No vehicles match your criteria.</p>
+    {% endif %}
+</body>
+</html>
