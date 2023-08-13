@@ -1,4 +1,19 @@
 
+#from google.colab import auth
+#from google.auth import default
+#import gspread
+#from IPython.display import Image, display
+#
+#auth.authenticate_user()
+#creds, _ = default()
+#client = gspread.authorize(creds)
+## see: https://docs.google.com/spreadsheets/d/1RXQwBuSVY_mrZtxHDPxYbTohze9z7izSo_ShzOyqRcA/edit?usp=sharing
+#DOCUMENT_ID = "1RXQwBuSVY_mrZtxHDPxYbTohze9z7izSo_ShzOyqRcA" # identifier of the public access database (see document URL)
+#SHEET_NAME = "EV"
+#doc = client.open_by_key(DOCUMENT_ID)
+#sheet = doc.worksheet(SHEET_NAME)
+#products = sheet.get_all_records()
+
 def format_usd(my_price):
     return f"${my_price:,.2f}"
 
