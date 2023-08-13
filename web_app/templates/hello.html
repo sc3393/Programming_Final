@@ -1,10 +1,37 @@
-{% extends "bootstrap_5_layout.html" %}
-{% set active_page = "hello" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+</head>
+<body>
+    <form method="post">
+        <label for="price_min">Price Min:</label>
+        <input type="number" name="price_min" required><br>
 
-{% block content %}
+        <label for="price_max">Price Max:</label>
+        <input type="number" name="price_max" required><br>
 
-    <h1>{{ message }}</h1>
+        <label for="type">Type:</label>
+        <input type="text" name="type" required><br>
 
-    <p>This is a paragraph on the "hello" page.</p>
+        <label for="style">Style:</label>
+        <input type="text" name="style" required><br>
 
-{% endblock %}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if user_picks %}
+        <h2>Selection:</h2>
+        <ul>
+            {% for x in user_picks %}
+                <li>MSRP: {{ format_usd(x['MSRP']) }} | Type: {{ x['TYPE'] }} | Style: {{ x['STYLE'] }} | Make: {{ x['MAKE'] }} | Model: {{ x['MODEL'] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results.</p>
+    {% endif %}
+</body>
+</html>

@@ -2,6 +2,7 @@
 def format_usd(my_price):
     return f"${my_price:,.2f}"
 
+
 if __name__ =="__main__":
 
     ev_database=[
