@@ -46,11 +46,14 @@ if __name__ =="__main__":
     finished_inputs = False
     while not finished_inputs:
         user_type = input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
-        if str(user_type) != "compact" or "suv" or "sedan":
-            print("Please Input a Valid Product ID")
-            
+        if user_type == "compact" or "suv" or "sedan":
+            finished_inputs = True   
         else:
-            finished_inputs = True
+            pass
+        if user_type == "compact" or "suv" or "sedan":
+            print("")
+        else:
+            print("Please Input a Valid Product ID")    
         
         
     #if user_type != "compact" or "suv" or "sedan":
