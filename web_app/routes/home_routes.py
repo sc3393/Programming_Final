@@ -36,6 +36,6 @@ def input():
             user_picks.append(x)
 
     return render_template("home.html", ev_database=ev_database, user_picks=user_picks, format_usd=format_usd)
-
+    #used OpenAI ChatGPT to resolve error where ev_database, user_picks and format_usd in return
 
 
