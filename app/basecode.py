@@ -5,10 +5,22 @@ def format_usd(my_price):
 if __name__ =="__main__":
 
     ev_database=[
-        {"MSRP": 60, "TYPE":"compact", "STYLE":"innovative", "MAKE":"Hyundai", "MODEL":"Lyric"},
-        {"MSRP": 90, "TYPE":"SUV", "STYLE":"conventional","MAKE":"Ford","MODEL":"F150"},
-        {"MSRP": 120, "TYPE":"sedan", "STYLE":"innovative","MAKE":"Porsche","MODEL":"Taycan"}
-                 ]
+        {"MSRP": 78000, "TYPE":"SUV", "STYLE":"Innovative", "MAKE":"Rivian", "MODEL":"R1S"},
+        {"MSRP": 87100, "TYPE":"SUV", "STYLE":"Conventional", "MAKE":"BMW", "MODEL":"iX"},
+        {"MSRP": 74400, "TYPE":"SUV", "STYLE":"Conventional", "MAKE":"Audi", "MODEL":"Q8 e-tron"},
+        {"MSRP": 108700, "TYPE":"SUV", "STYLE":"Conventional", "MAKE":"GMC", "MODEL":"Hummer EV"},
+        {"MSRP": 42600, "TYPE":"SUV", "STYLE":"Innovative", "MAKE":"Kia", "MODEL":"EV 6"},
+        {"MSRP": 26500, "TYPE":"Compact", "STYLE":"Conventional", "MAKE":"Chevrolet", "MODEL":"Bolt "},
+        {"MSRP": 28140, "TYPE":"Compact", "STYLE":"Conventional", "MAKE":"Nissan", "MODEL":"Leaf "},
+        {"MSRP": 30900, "TYPE":"Compact", "STYLE":"Conventional", "MAKE":"MINI", "MODEL":"Electric Hardtop"},
+        {"MSRP": 27800, "TYPE":"Compact", "STYLE":"Conventional", "MAKE":"Chevrolet", "MODEL":"Bolt EUV"},
+        {"MSRP": 41450, "TYPE":"Compact", "STYLE":"Innovative", "MAKE":"Hyundai", "MODEL":"Ioniq 5"},
+        {"MSRP": 88490, "TYPE":"Sedan ", "STYLE":"Innovative", "MAKE":"Tesla", "MODEL":"Model S"},
+        {"MSRP": 40240, "TYPE":"Sedan ", "STYLE":"Innovative", "MAKE":"Tesla", "MODEL":"Model 3"},
+        {"MSRP": 87400, "TYPE":"Sedan ", "STYLE":"Innovative", "MAKE":"Lucid", "MODEL":"Air "},
+        {"MSRP": 41600, "TYPE":"Sedan ", "STYLE":"Innovative", "MAKE":"Hyundai", "MODEL":"Ioniq 6"},
+        {"MSRP": 86700, "TYPE":"Sedan ", "STYLE":"Conventional", "MAKE":"Porsche", "MODEL":"Taycan "},
+        ]
     
     user_price_min=int(input("Price Min"))
     user_price_max=int(input("Price Max"))
