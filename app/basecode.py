@@ -44,8 +44,6 @@ if __name__ =="__main__":
     user_type=input("Please Select One of the Following Vehicle Types (SUV, Compact, Sedan): ").lower()
     if user_type != "compact" or "suv" or "sedan":
         print("Type Entered is not available, please try again!")
-    else:
-        pass
     user_style=input("Please Select One of the Following Styles (Innovative, Conventional): ").lower()
 
     user_picks=[]
