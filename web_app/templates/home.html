@@ -13,8 +13,8 @@
         <label for="price_range">Price Range:</label>
         <select name="price_range" required>
             <option value="20000-40000">$20,000 - $40,000</option>
-            <option value="40000-70000">$40,000 - $70,000</option>
-            <option value="70000-90000000">$70,000+</option>
+            <option value="40001-70000">$40,000 - $70,000</option>
+            <option value="70001-90000000">$70,000+</option>
         </select>
         <br>
         
@@ -42,6 +42,8 @@
         {% for x in user_picks %}
         <li>
             MSRP: {{ format_usd(x['MSRP']) }} | Type: {{ x['TYPE'] }} | Style: {{ x['STYLE'] }} | Make: {{ x['MAKE'] }} | Model: {{ x['MODEL'] }}
+            <br>
+            <img src="{{ x['IMG_URL'] }}" alt="{{ x['MAKE'] }} {{ x['MODEL'] }}" style="max-width: 300px;">
         </li>
         {% endfor %}
     </ul>

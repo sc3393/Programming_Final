@@ -23,7 +23,7 @@ def input():
         max_price = 70000
     else:
         min_price = 70001
-        max_price = float("inf")
+        max_price = 90000000
     
     user_picks = []
 
