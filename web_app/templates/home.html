@@ -42,6 +42,8 @@
         {% for x in user_picks %}
         <li>
             MSRP: {{ format_usd(x['MSRP']) }} | Type: {{ x['TYPE'] }} | Style: {{ x['STYLE'] }} | Make: {{ x['MAKE'] }} | Model: {{ x['MODEL'] }}
+            <br>
+            <img src="{{ url_for('static', filename=x['IMG_URL']) }}" alt="{{ x['MAKE'] }} {{ x['MODEL'] }}" style="max-width: 300px;">
         </li>
         {% endfor %}
     </ul>
